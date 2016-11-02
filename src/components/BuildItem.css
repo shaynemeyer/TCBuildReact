@@ -1,0 +1,128 @@
+.build {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+.build a {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 5px 10px 5px 5px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.build a,
+.build a:hover,
+.build a:visited {
+    color: white;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+
+.build .build-name {
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.build .labels {
+    margin-top: -1px;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.build .label {
+    margin-left: .5em;
+}
+
+.build .changes-container {
+    height: 1.5em;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.build .changes-container .changes {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    transform: translateY(90%);
+    transition: opacity 1s, transform 2s;
+    width: 100%;
+}
+
+.changes-container .changes  .active {
+     opacity: 1;
+     transform: translateY(0);
+     transition: opacity 2s, transform 2s;
+}
+
+.theme-dark .build a {
+    background-color: #360;
+}
+
+.theme-dark .build a.disabled a {
+    background-color: #888;
+}
+
+.theme-dark .build a.disabled a.build-name {
+    color: black;
+}
+
+.theme-dark .build a.disabled .broken a {
+    background-color: #888;
+}
+
+.theme-dark .build a.offline a,
+.theme-dark .build a.offline .broken a,
+.theme-dark .build a.offline .building a,
+.theme-dark .build a.offline .broken.building a {
+     background-color: #888;
+}
+
+.theme-dark .build a.offline .disabled .build-name,
+.theme-dark .build a.offline .disabled.broken .build-name {
+     color: black;
+}
+
+.theme-dark .build a.offline .build-name {
+    color: #360;
+}
+
+.theme-dark .build a.offline .broken .build-name {
+    color: #900;
+}
+
+.theme-dark .build a.building a {
+    background-color: #566600;
+}
+
+.theme-dark .build a.building .label-warning {
+    color: #360;
+}
+.theme-dark .build a.building .changes {
+    color: black;
+}
+
+.theme-dark .build a.broken a {
+    background-color: #900;
+}
+
+.theme-dark .build a.broken.building a {
+    background-color: #992300;
+}
+
+.label-warning {
+    background-color: #f89406;
+}
+.label-default {
+    background-color: #444;
+}
